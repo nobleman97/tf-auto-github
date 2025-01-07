@@ -1,0 +1,21 @@
+name: Build and Deploy to {environment}
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Placeholder for Build Step
+        run: echo "Build process for {environment} goes here"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder for Deploy Step
+        run: echo "Deployment process for {environment} goes here"
